@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fidget Spinner - Rylan Erman</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            padding: 0.5rem 1rem;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.2s;
+        }
+
+        .back-button:hover {
+            background-color: #555;
+        }
+
+        .spinner-container {
+            margin-top: 5rem;
+            text-align: center;
+        }
+
+        .spinner {
+            width: 200px;
+            height: 200px;
+            border: 10px solid #333;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s linear infinite;
+            margin: 2rem auto;
+            cursor: pointer;
+        }
+
+        .spinner.stopped {
+            animation: none;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        h1 {
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .instructions {
+            color: #666;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← Back to Projects</a>
+    <div class="spinner-container">
+        <h1>Fidget Spinner</h1>
+        <img src="PATH_TO_YOUR_IMAGE" alt="Fidget Spinner" class="spinner" id="spinner">
+        <p class="instructions">Click the spinner to start/stop it!</p>
+    </div>
+
+    <script>
+        const spinner = document.getElementById('spinner');
+        let isSpinning = true;
+
+        spinner.addEventListener('click', () => {
+            isSpinning = !isSpinning;
+            if (isSpinning) {
+                spinner.classList.remove('stopped');
+            } else {
+                spinner.classList.add('stopped');
+            }
+        });
+    </script>
+</body>
+</html> 
