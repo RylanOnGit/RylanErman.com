@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: #ffffff;
+            background: linear-gradient(135deg, #1a4d4d 0%, #0d2b2b 100%);
             font-family: Arial, sans-serif;
             padding: 2rem;
         }
@@ -25,7 +25,7 @@
             margin-bottom: 3rem;
             font-size: 3rem;
             font-weight: bold;
-            color: #333;
+            color: #ffffff;
         }
 
         .projects-grid {
@@ -37,53 +37,35 @@
         }
 
         .project-box {
-            background-color: #f5f5f5;
+            background-color: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             padding: 1.5rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             transition: transform 0.2s ease;
             text-decoration: none;
             color: inherit;
+            backdrop-filter: blur(5px);
         }
 
         .project-box:hover {
             transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.15);
         }
 
         .project-box h2 {
-            color: #333;
+            color: #ffffff;
             margin-bottom: 1rem;
         }
 
         .project-box p {
-            color: #666;
+            color: #e0e0e0;
             line-height: 1.5;
-        }
-
-        .add-project {
-            background-color: #e0e0e0;
-            border: 2px dashed #999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 200px;
-            cursor: pointer;
-            color: #666;
-            font-size: 1.2rem;
-        }
-
-        .add-project:hover {
-            background-color: #d0d0d0;
         }
     </style>
 </head>
 <body>
     <h1>Rylan Erman</h1>
     <div class="projects-grid">
-        <a href="fidget-spinner.html" class="project-box">
-            <h2>Fidget spinner website</h2>
-            <p>Just a simple fidget spinner website I made for Fun!!</p>
-        </a>
         <a href="balls.html" class="project-box">
             <h2>Balls</h2>
             <p>A fun project involving bouncing balls animation and physics!</p>
@@ -91,9 +73,6 @@
         <div class="project-box">
             <h2>Project 2</h2>
             <p>Description of your second project goes here. You can add details about what you built and what technologies you used.</p>
-        </div>
-        <div class="add-project">
-            + Add New Project
         </div>
     </div>
 </body>
